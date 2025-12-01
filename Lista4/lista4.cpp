@@ -5,7 +5,8 @@
 using namespace std;
 
 void task1() {
-	int a, output = 1;
+	int a;
+	long long output = 0;
 	cout << "Enter factorial number: ";
 	cin >> a;
 	if (a >= 0) {
@@ -192,18 +193,15 @@ void task8() {
 	double x;
 	cout << "Enter degree of polynomial (n): ";
 	cin >> n;
-
 	cout << "Enter value of x: ";
 	cin >> x;
 	vector<double> coefficients(n + 1);
-
 	cout << "Enter coefficients starting from a_n down to a_0:" << endl;
 	for (int i = 0; i <= n; i++) {
 		cout << "a_" << (n - i) << ": ";
 		cin >> coefficients[i];
 	}
 	double result = coefficients[0];
-
 	for (int i = 1; i <= n; i++) {
 		result = result * x + coefficients[i];
 	}
@@ -215,18 +213,15 @@ void task9() {
 	double x;
 	cout << "Enter degree of polynomial (n): ";
 	cin >> n;
-
 	cout << "Enter value of x: ";
 	cin >> x;
 	vector<double> coefficients(n + 1);
-
 	cout << "Enter coefficients starting from a_n down to a_0:" << endl;
 	for (int i = 0; i <= n; i++) {
 		cout << "a_" << (n - i) << ": ";
 		cin >> coefficients[i];
 	}
 	double result = coefficients[0];
-
 	for (int i = 1; i <= n; i++) {
 		result = result * x + coefficients[i];
 	}

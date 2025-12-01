@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 #include<cmath>
 
 using namespace std;
@@ -34,23 +35,21 @@ int task3() {
 }
 
 int task4() {
-	const int n = 6;
-	int a[n];
-	int x, i, output = 0;
-	cout << "Enter 6 coefficients, starting with a6 down to a:\n";
-	cout << "(e.g., a5 a4 a3 a2 a1 a)\n";
-	for (i = 0; i < 6; ++i)
-	{
-		cin >> a[i];
-	}
-	cout << "Enter x: ";
+	int n = 6;
+	double x;
+	cout << "Enter value of x: ";
 	cin >> x;
-	for (i = 0; i < 6; ++i)
-	{
-		output = output * x + a[i];
+	vector<double> coefficients(n + 1);
+	cout << "Enter coefficients starting from a_n down to a_0:" << endl;
+	for (int i = 0; i <= n; i++) {
+		cout << "a_" << (n - i) << ": ";
+		cin >> coefficients[i];
 	}
-	cout << "Answer to Task 4 is: " << output << "\n";
-	return 0;
+	double result = coefficients[0];
+	for (int i = 1; i <= n; i++) {
+		result = result * x + coefficients[i];
+	}
+	cout << "Result W(" << x << ") = " << result << endl;
 }
 
 int task5() {
