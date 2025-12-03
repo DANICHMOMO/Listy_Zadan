@@ -84,18 +84,16 @@ void task3() {
 	}
 	for (int i = 0; i < x; i++)
 	{
-		for (int j = 0; j < x - i; j++)
-		{
-			if (a[i] == b[j]) {
-				c.push_back(a.at(i));
-				count++;
-			}
+		if (a[i] == b[i]) {
+			c.push_back(a.at(i));
+			count++;
 		}
 	}
 	cout << count << endl;
+	cout << "Array is: ";
 	for (int i = 0; i < c.size(); i++)
 	{
-		cout << "Array is: " << c.at(i) << ", ";
+		cout << c.at(i) << ", ";
 	}
 }
 
