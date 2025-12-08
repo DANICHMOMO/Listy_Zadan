@@ -128,7 +128,27 @@ void task4() {
 }
 
 void task5() {
-	vector<int> a;
+	vector<string> a;
+	string x;
+	cout << "Enter numbers:" << endl;
+	while (cin >> x) {
+		if (x == "0") break;
+		a.push_back(x);
+	}
+	bool isPalindrome = true;
+	int n = a.size();
+	for (int i = 0; i < n / 2; i++) {
+		if (a[i] != a[n - 1 - i]) {
+			isPalindrome = false;
+			break;
+		}
+	}
+	if (isPalindrome && n > 0)
+		cout << "Palindrome.";
+	else
+		cout << "Not Palindrome.";
+
+	/*vector<int> a;
 	int x;
 	cout << "Enter numbers:" << endl;
 	while (cin >> x) {
@@ -148,7 +168,7 @@ void task5() {
 	if (isPalindrome && n > 0)
 		cout << "Palindrome.";
 	else
-		cout << "Not Palindrome.";
+		cout << "Not Palindrome.";*/
 }
 
 void task6() {
@@ -206,7 +226,7 @@ void task7() {
 void task8() {
 	vector<int> a;
 	int x;
-	cout << "Podaj ciag zer i jedynek (zakoncz 2):" << endl;
+	cout << "Give array of 0 and 1 with the ending 2:" << endl;
 	while (cin >> x) {
 		if (x == 2) break;
 		if (x == 0 || x == 1) {
@@ -218,10 +238,10 @@ void task8() {
 		remainder = (remainder * 2 + bit) % 3;
 	}
 	if (remainder == 0 && !a.empty()) {
-		cout << "TAK (Podzielna przez 3)" << endl;
+		cout << "Yes (Devidable by 3)" << endl;
 	}
 	else {
-		cout << "NIE (Reszta wynosi: " << remainder << ")" << endl;
+		cout << "No (Reminder is: " << remainder << ")" << endl;
 	}
 }
 
