@@ -208,7 +208,7 @@ void task7() {
 	}
 	int half = n / 2;
 	bool isConcatenation = true;
-	for (int i = 0; i < half; i++) {
+	for (int i = 0; i < half  ; i++) {
 		if (a[i] != a[i + half]) {
 			isConcatenation = false;
 			break;
